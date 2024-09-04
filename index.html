@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1: Full-width video -->
+        <div class="section section1">
+            <video controls>
+                <source src="your-video-file.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Intro Section: Image on left, text on right -->
+        <div class="section intro-sec-content">
+            <div class="image-column">
+                <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png" alt="Image description">
+            </div>
+            <div class="text-column">
+                <h2 class="title">Your Title Here</h2>
+                <h4 class="subtitle">Your subtitle here, up to 18 words</h4>
+                <p class="description">Your paragraph here, up to 500 characters. This is where you can provide more detailed information, text, or content that you'd like to present.</p>
+
+                <!-- Static Text Items -->
+                <div class="text-items">
+                    <div class="text-item">Example Text 1: This is the first example of text in the gallery.</div>
+                    <div class="text-item">Example Text 2: Here's another example of text for you to read.</div>
+                    <div class="text-item">Example Text 3: This is the third example of text content.</div>
+                    <div class="text-item">Example Text 4: This gallery allows you to scroll through various text items.</div>
+                    <div class="text-item">Example Text 5: Here is the final example of text in this scrollable gallery.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Three rows of cards -->
+        <div class="section section3">
+            <div class="card-row">
+                <div class="card" onclick="openModal(1)">
+                    <img src="https://via.placeholder.com/150" alt="Card Image 1">
+                    <div class="card-title">Card 1</div>
+                </div>
+                <div class="card" onclick="openModal(2)">
+                    <img src="https://via.placeholder.com/150" alt="Card Image 2">
+                    <div class="card-title">Card 2</div>
+                </div>
+                <div class="card" onclick="openModal(3)">
+                    <img src="https://via.placeholder.com/150" alt="Card Image 3">
+                    <div class="card-title">Card 3</div>
+                </div>
+            </div>
+            <div class="card-row elongated">
+                <div class="card" onclick="openModal(4)">
+                    <img src="https://via.placeholder.com/300x150" alt="Card Image 4">
+                    <div class="card-title">Elongated Card</div>
+                </div>
+            </div>
+            <div class="card-row">
+                <div class="card" onclick="openModal(5)">
+                    <img src="https://via.placeholder.com/150" alt="Card Image 5">
+                    <div class="card-title">Card 4</div>
+                </div>
+                <div class="card" onclick="openModal(6)">
+                    <img src="https://via.placeholder.com/150" alt="Card Image 6">
+                    <div class="card-title">Card 5</div>
+                </div>
+                <div class="card" onclick="openModal(7)">
+                    <img src="https://via.placeholder.com/150" alt="Card Image 7">
+                    <div class="card-title">Card 6</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Image Carousel -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="carousel">
+                    <img src="https://via.placeholder.com/600x400?text=Image+1" alt="Carousel Image 1">
+                    <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Carousel Image 2">
+                    <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Carousel Image 3">
+                </div>
+                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Remaining Sections -->
+        <div class="section section4">Section 4</div>
+        <div class="section section5">Section 5</div>
+        <div class="section section6">Section 6</div>
+        <div class="section section7">Section 7</div>
+        <div class="section section8">Section 8</div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+function openModal(cardNumber) {
+    const modal = document.getElementById('modal');
+    const carouselImages = document.querySelectorAll('.carousel img');
+    
+    // Adjust images based on card number
+    carouselImages.forEach((img, index) => {
+        img.src = `https://via.placeholder.com/600x400?text=Image+${index + 1}+for+Card+${cardNumber}`;
+    });
+
+    modal.style.display = 'block';
+    showSlide(currentSlide);
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+function showSlide(slideIndex) {
+    const slides = document.querySelectorAll('.carousel img');
+    if (slideIndex >= slides.length) {
+        currentSlide = 0;
+    }
+    if (slideIndex < 0) {
+        currentSlide = slides.length - 1;
+    }
+    slides.forEach((slide, index) => {
+        slide.style.display = (index === currentSlide) ? 'block' : 'none';
+    });
+}
+
+function prevSlide() {
+    showSlide(currentSlide -= 1);
+}
+
+function nextSlide() {
+    showSlide(currentSlide += 1);
+}
+
+// Close modal when clicking outside of the modal content
+window.onclick = function(event) {
+    if (event.target === document.getElementById('modal')) {
+        closeModal();
+    }
+}
+
+    </script>
+</body>
+</html>
