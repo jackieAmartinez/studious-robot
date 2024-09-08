@@ -1,0 +1,140 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Creative Placemaking Container styling */
+.creativeplacemakingcontainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Chitwood video styling */
+.cp-videohero {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+}
+
+.cp-videohero video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Definition section styling */
+.cp-definition-section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #a37cad;
+}
+
+/* Left column styling */
+.cp-leftcolumn {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.cp-definition-section .cp-leftcolumn img {
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Right column styling */
+.cp-rightcolumn {
+    flex: 2;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cp-definition-section {
+        flex-direction: column;
+    }
+
+    .cp-leftcolumn,
+    .cp-rightcolumn {
+        margin-right: 0;
+        min-width: 100%;
+    }
+}
+
+/* Definition Welcome styling */
+.definition-welcome {
+    width: 100%;  /* Makes it responsive to container width */
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 3px solid rgb(202, 214, 33);
+    box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
+}
+
+/* Carousel styling */
+.text-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Makes it responsive to container width */
+    margin-bottom: 10px;
+    padding: 15px;
+    gap: 10px;
+    border: 3px solid rgb(34, 20, 191);
+    box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
+}
+
+/* Gallery section styling */
+.cp-gallery-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Google Map section styling */
+.cp-googlemap-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* How They Did It section styling */
+.cp-how-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Timeline section styling */
+.cp-timeline-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* By the Numbers section styling */
+.cp-bythenumbers-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Thank You section styling */
+.cp-thankyou-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
