@@ -1,108 +1,245 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Creative Placemaking Container styling */
 .creativeplacemakingcontainer {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Chitwood video styling */
 .cp-videohero {
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border: 2px solid #ccc;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 2px solid #ccc;
 }
 
 .cp-videohero video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* Definition section styling */
 .cp-definition-section {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    overflow: hidden;
-    padding: 20px;
-    background-color: #a37cad;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Set max-width to match other sections */
+  margin: 0 auto; /* Center align */
+  overflow: hidden;
+  padding: 20px;
+  background-color: #a37cad;
 }
 
 /* Left column styling */
 .cp-leftcolumn {
-    flex: 1;
-    min-width: 200px;
-    margin-right: 20px;
-    overflow: hidden;
+  flex: 1;
+  min-width: 200px;
+  margin-right: 20px;
+  overflow: hidden;
 }
 
 .cp-definition-section .cp-leftcolumn img {
-    width: 100%;
-    max-width: 500px;
-    min-width: 200px;
-    height: auto;
-    border-radius: 10px;
-    display: block;
+  width: 100%;
+  max-width: 600px;
+  min-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
 
 /* Right column styling */
 .cp-rightcolumn {
-    flex: 2;
-    text-align: left;
-    overflow: hidden;
+  flex: 2;
+  text-align: left;
+  overflow: hidden;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .cp-definition-section {
-        flex-direction: column;
-    }
+  .cp-definition-section {
+      flex-direction: column;
+  }
 
-    .cp-leftcolumn,
-    .cp-rightcolumn {
-        margin-right: 0;
-        min-width: 100%;
-    }
+  .cp-leftcolumn,
+  .cp-rightcolumn {
+      margin-right: 0;
+      min-width: 100%;
+  }
 }
 
 /* Definition Welcome styling */
 .definition-welcome {
-    width: 100%;  /* Makes it responsive to container width */
-    margin-bottom: 10px;
-    padding: 15px;
-    border: 3px solid rgb(202, 214, 33);
-    box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
+  width: 80%;  /* Makes it responsive to container width */
+  margin: auto;
+  padding: 15px;
+  overflow: hidden;
+  border: 3px solid rgb(202, 214, 33);
+  box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
 }
 
 /* Carousel styling */
 .text-carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Makes it responsive to container width */
-    margin-bottom: 10px;
-    padding: 15px;
-    gap: 10px;
-    border: 3px solid rgb(34, 20, 191);
-    box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 150px;
+  width: 75%; /* Makes it responsive to container width */
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 50px;
+  gap: 10px;
+  border: 3px solid rgb(34, 20, 191);
+  box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  
+  top: 50%;
+  width: auto;
+  
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.definition-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: static;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 /* Gallery section styling */
 .cp-gallery-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+width: 100%;
+max-width: 1200px; /* Set max-width to match other sections */
+margin: 0 auto; /* Center align */
+display: flex;
+flex-direction: column;
+gap: 20px; /* Space between rows */
+padding: 20px;
+background-color: #e18298;
 }
+
+.projectface-row {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px; /* Space between columns */
+border: 3px solid rgb(255, 94, 0);
+}
+
+.projectface-row:nth-child(2) {
+grid-template-columns: 1fr; /* Single block in the middle row */
+}
+
+.projectface-block {
+width: 100%;
+padding-top: 100%; /* Aspect ratio 1:1 to keep it square */
+position: relative;
+border: 3px solid rgb(32, 111, 5);
+overflow: hidden;
+}
+
+.pfblock-elongated {
+  width: 100%;
+  padding-top: 30%;
+  position: relative;
+  border: 3px solid rgb(32, 111, 5);
+  overflow: hidden;
+  }
+
+.projectface-text-block {
+position: absolute;
+bottom: 20px;
+right: 0px;
+left: 0px;
+background-color: black;
+color: white;
+border: 3px solid rgb(154, 144, 241);
+padding: 15px;
+}
+
+.projectface-block img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.pfblock-elongated img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+
 
 /* Google Map section styling */
 .cp-googlemap-section {
