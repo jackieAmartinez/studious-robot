@@ -295,23 +295,117 @@ object-fit: cover;
 }
 /* Google Map section styling */
 .cp-googlemap-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Set max-width to match other sections */
+  margin: 0 auto; /* Center align */
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #a37cad;
 }
 
 /* How They Did It section styling */
 .cp-how-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 3px solid rgb(3, 2, 3);
 }
 
 /* Timeline section styling */
 .cp-timeline-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  max-width: 1200px; /* Set max-width to match other sections */
+  margin: 0 auto; /* Center align */
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #a37cad;
+}
+
+.timeline-container {
+  background-color:rgb(4, 148, 40);
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  }
+
+/* Container with timeline */
+.timeline {
+display: flex;
+background-color:rgb(148, 4, 148);
+padding: 40px;
+text-align: center;
+overflow: hidden;
+justify-content: center;
+}
+
+.timeline ul{
+  padding: 50px 0;
+}
+
+.timeline ul li{
+  list-style: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background-color:rgb(255, 94, 0);
+}
+
+.timeline time{
+  display: block;
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.timeline ul li:after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.5s;
+  background-color: inherit;
+  z-index: 1;
+}
+
+.timeline ul li div{
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background-color:rgb(202, 214, 33);
+  transition: all 0.5s;
+}
+
+.timeline ul li:nth-child(even) div{
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div{
+  left: calc(-400px - 45px + 6px);
+}
+
+.timeline ul li.in-view:after{
+  background-color:rgb(34, 20, 191);
+}
+
+.timeline ul li.in-view div{
+  transform: none !important;
+  opacity: 1;
 }
 
 /* By the Numbers section styling */
