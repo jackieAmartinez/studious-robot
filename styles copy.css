@@ -35,6 +35,7 @@
   max-width: 1200px; /* Set max-width to match other sections */
   margin: 0 auto; /* Center align */
   overflow: hidden;
+  margin-top: 20px;
   padding: 20px;
   background-color: #a37cad;
 }
@@ -78,7 +79,7 @@
 
 /* Definition Welcome styling */
 .definition-welcome {
-  width: 80%;  /* Makes it responsive to container width */
+  width: 100%;  /* Makes it responsive to container width */
   margin: auto;
   padding: 15px;
   overflow: hidden;
@@ -92,7 +93,7 @@
   align-items: center;
   justify-content: center;
   max-height: 150px;
-  width: 75%; /* Makes it responsive to container width */
+  width: 80%; /* Makes it responsive to container width */
   margin: auto;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -181,6 +182,7 @@ display: flex;
 flex-direction: column;
 gap: 20px; /* Space between rows */
 padding: 20px;
+margin-top: 20px;
 background-color: #e18298;
 }
 
@@ -213,7 +215,8 @@ overflow: hidden;
 
 .projectface-text-block {
 position: absolute;
-bottom: 20px;
+top: 75%;
+bottom: 0px;
 right: 0px;
 left: 0px;
 background-color: black;
@@ -240,7 +243,56 @@ object-fit: cover;
   object-fit: cover;
   }
 
+/* Modal container */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
+/* Modal content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  margin-top: 5%;
+  padding: 0;
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: scroll;
+  max-height: 60vh; /* Prevents modal from growing too large */
+  border: 3px solid rgb(231, 17, 247);
+}
+
+/* Modal images */
+.modal-image {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Close button */
+.close {
+  color: rgb(2, 0, 0);
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}  
+
+.modalpop-text {
+  padding: 20px;
+  border: 3px solid rgb(3, 2, 3);
+}
 /* Google Map section styling */
 .cp-googlemap-section {
     width: 90%;

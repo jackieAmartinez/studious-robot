@@ -67,7 +67,7 @@
           <!--First row gallery elements-->
           <div class="projectface-row">
             <!--Organization 1 Name-->
-            <div class="projectface-block">
+            <div class="projectface-block" onclick="openModal(1)">
             <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png">
             <div class="projectface-text-block">
               <h4>Title</h4>
@@ -75,7 +75,7 @@
             </div>  
             </div>
             <!--Organization 2 Name-->
-            <div class="projectface-block">
+            <div class="projectface-block" onclick="openModal(2)">
               <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png">
               <div class="projectface-text-block">
                 <h4>Title</h4>
@@ -84,7 +84,7 @@
               </div>
               <!--Organization 3 Name-->
             <div class="projectface-block">
-              <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png">
+              <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png" onclick="openModal(3)">
               <div class="projectface-text-block">
                 <h4>Title</h4>
                 <p>A lovely statement</p>
@@ -96,7 +96,7 @@
           <div class="projectface-row">
             <!--Organization 4 Name-->
             <div class="pfblock-elongated">
-            <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png">
+            <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png" onclick="openModal(4)">
             <div class="projectface-text-block">
               <h4>Title</h4>
               <p>A lovely statement</p>
@@ -108,7 +108,7 @@
           <div class="projectface-row">
             <!--Organization 1 Name-->
             <div class="projectface-block">
-            <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png">
+            <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png" onclick="openModal(5)">
             <div class="projectface-text-block">
               <h4>Title</h4>
               <p>A lovely statement</p>
@@ -116,7 +116,7 @@
             </div>
             <!--Organization 2 Name-->
             <div class="projectface-block">
-              <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png">
+              <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png" onclick="openModal(6)">
               <div class="projectface-text-block">
                 <h4>Title</h4>
                 <p>A lovely statement</p>
@@ -124,13 +124,77 @@
               </div>
               <!--Organization 3 Name-->
             <div class="projectface-block">
-              <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png">
+              <img src="https://inrc.org/wp-content/uploads/2024/07/Screenshot-2024-07-18-122133.png" onclick="openModal(7)">
               <div class="projectface-text-block">
                 <h4>Title</h4>
                 <p>A lovely statement</p>
               </div>  
               </div>
           </div>
+          <!-- Modal structure (repeat for each block) -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal(1)">&times;</span>
+          <div class="modalpop-text">This is a tiny blurb about the project that I'm hoping will cover the important details investors and community members should know about.</div>
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 1">
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 2">
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 3">
+      </div>
+  </div>
+
+  <div id="modal2" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal(2)">&times;</span>
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 1">
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 2">
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 3">
+      </div>
+  </div>
+
+  <div id="modal3" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal(3)">&times;</span>
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 1">
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 2">
+          <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 3">
+      </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(4)">&times;</span>
+        <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 1">
+        <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 2">
+        <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 3">
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal(5)">&times;</span>
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 1">
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 2">
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 3">
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal(6)">&times;</span>
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 1">
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 2">
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 3">
+  </div>
+</div>
+
+<div id="modal7" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal(7)">&times;</span>
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 1">
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 2">
+      <img src="https://via.placeholder.com/600x400" class="modal-image" alt="Image 3">
+  </div>
+</div>
         </div>
 
         <!-- Section 4: Google Maps section -->
@@ -189,5 +253,22 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-    </script>
+   
+// Open modal
+function openModal(modalNumber) {
+            document.getElementById('modal' + modalNumber).style.display = "block";
+        }
+
+        // Close modal
+        function closeModal(modalNumber) {
+            document.getElementById('modal' + modalNumber).style.display = "none";
+        }
+
+        // Close modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }   
+   </script>
 </html>
