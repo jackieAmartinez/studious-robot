@@ -5,27 +5,32 @@
   box-sizing: border-box;
 }
 
+/*.creativeplacemakingpage {
+  background-image: url('/assets/layered-waves-haikei.svg');
+}*/
+
 /* Creative Placemaking Container styling */
 .creativeplacemakingcontainer {
+ 
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 5px;
 }
 
 /* Chitwood video styling */
 .cp-videohero {
   width: 100%;
   max-width: 1200px;
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border: 2px solid #ccc;
+  margin-top: 50px;
+  border-radius: 30px;
+
 }
 
 .cp-videohero video {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 35px;
 }
 
 /* Definition section styling */
@@ -37,7 +42,11 @@
   overflow: hidden;
   margin-top: 20px;
   padding: 20px;
-  background-color: #a37cad;
+  background-color: #ffffff;
+  border-radius: 30px;
+box-shadow:  20px 20px 34px #bebebe,
+             -20px -20px 34px #ffffff;
+             border: 1px solid rgb(3, 2, 3);
 }
 
 /* Left column styling */
@@ -83,8 +92,8 @@
   margin: auto;
   padding: 15px;
   overflow: hidden;
-  border: 3px solid rgb(202, 214, 33);
   box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
+  
 }
 
 /* Carousel styling */
@@ -99,8 +108,12 @@
   margin-bottom: 25px;
   padding: 50px;
   gap: 10px;
-  border: 3px solid rgb(34, 20, 191);
   box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
+  border-radius: 30px;
+background-color:rgba(255, 255, 255, 0.8);
+border: 1px solid rgb(3, 2, 3);
+box-shadow:  -22px 22px 44px #d4d4d4,
+             22px -22px 44px #ffffff;
 }
 
 /* Hide the images by default */
@@ -111,12 +124,10 @@
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  
   top: 50%;
   width: auto;
-  
   padding: 16px;
-  color: white;
+  color: #303030;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -132,18 +143,20 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Caption text */
 .definition-text {
-  color: #f2f2f2;
+  color: #000000;
+  
   font-size: 15px;
   padding: 8px 12px;
   position: static;
   bottom: 8px;
   width: 100%;
   text-align: center;
+
 }
 
 /* The dots/bullets/indicators */
@@ -181,16 +194,21 @@ margin: 0 auto; /* Center align */
 display: flex;
 flex-direction: column;
 gap: 20px; /* Space between rows */
-padding: 20px;
+padding: 50px;
 margin-top: 20px;
-background-color: #e18298;
+background-color: #ffffff;
+  border-radius: 30px;
+box-shadow:  20px 20px 34px #bebebe,
+             -20px -20px 34px #ffffff;
+             border: 1px solid rgb(3, 2, 3);
 }
+
 
 .projectface-row {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px; /* Space between columns */
-border: 3px solid rgb(255, 94, 0);
+
 }
 
 .projectface-row:nth-child(2) {
@@ -201,15 +219,16 @@ grid-template-columns: 1fr; /* Single block in the middle row */
 width: 100%;
 padding-top: 100%; /* Aspect ratio 1:1 to keep it square */
 position: relative;
-border: 3px solid rgb(32, 111, 5);
+
 overflow: hidden;
+border-radius: 30px;
 }
 
 .pfblock-elongated {
   width: 100%;
   padding-top: 30%;
   position: relative;
-  border: 3px solid rgb(32, 111, 5);
+  border-radius: 30px;
   overflow: hidden;
   }
 
@@ -221,7 +240,7 @@ right: 0px;
 left: 0px;
 background-color: black;
 color: white;
-border: 3px solid rgb(154, 144, 241);
+
 padding: 15px;
 }
 
@@ -268,7 +287,7 @@ object-fit: cover;
   border-radius: 10px;
   overflow-y: scroll;
   max-height: 60vh; /* Prevents modal from growing too large */
-  border: 3px solid rgb(231, 17, 247);
+  
 }
 
 /* Modal images */
@@ -290,8 +309,8 @@ object-fit: cover;
 }  
 
 .modalpop-text {
-  padding: 20px;
-  border: 3px solid rgb(3, 2, 3);
+  padding: 40px;
+  
 }
 /* Google Map section styling */
 .cp-googlemap-section {
@@ -304,7 +323,11 @@ object-fit: cover;
   padding: 50px;
   align-items: center;
   justify-content: center;
-  background-color: #a37cad;
+  border-radius: 30px;
+background-color:rgba(255, 255, 255, 0.8);
+border: 1px solid rgb(3, 2, 3);
+box-shadow:  -22px 22px 44px #d4d4d4,
+             22px -22px 44px #ffffff;
 }
 
 /* How They Did It section styling */
@@ -316,7 +339,52 @@ object-fit: cover;
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 20px;
+  border-radius: 30px;
+background-color:rgba(255, 255, 255, 0.8);
+border: 1px solid rgb(3, 2, 3);
+box-shadow:  -22px 22px 44px #d4d4d4,
+             22px -22px 44px #ffffff;
+}
+
+.infographic {
+  border: 3px solid rgb(39, 174, 149);
+}
+
+.convex {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  20px 20px 60px #969696,
+               -20px -20px 60px #ffffff;
+}
+
+.concave {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  20px 20px 60px #969696,
+               -20px -20px 60px #ffffff;
+}
+
+.flat {
+  border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #969696,
+             -20px -20px 60px #ffffff;
+}
+
+.stand-in {
+  background-color:#f4f4f4;
+  min-height: 1000px;
+  min-width: 400px;
   border: 3px solid rgb(3, 2, 3);
+  margin: 50px;
+}
+
+.small-stand-in {
+  background-color:#f4f4f4;
+  min-height: 200px;
+  min-width: 300px;
+  border: 3px solid rgb(3, 2, 3);
+  margin: 50px;
 }
 
 /* Timeline section styling */
@@ -328,11 +396,15 @@ object-fit: cover;
   margin-top: 20px;
   padding: 20px;
   justify-content: center;
-  background-color: #a37cad;
+  border-radius: 30px;
+background-color:rgba(255, 255, 255, 0.8);
+border: 1px solid rgb(3, 2, 3);
+box-shadow:  -22px 22px 44px #d4d4d4,
+             22px -22px 44px #ffffff;
 }
 
 .timeline-container {
-  background-color:rgb(4, 148, 40);
+  
   padding: 30px;
   text-align: center;
   width: 100%;
@@ -341,7 +413,9 @@ object-fit: cover;
 /* Container with timeline */
 .timeline {
 display: flex;
+border-radius: 30px;
 background-color:rgb(148, 4, 148);
+margin-top: 20px;
 padding: 40px;
 text-align: center;
 overflow: hidden;
@@ -399,25 +473,134 @@ justify-content: center;
   left: calc(-400px - 45px + 6px);
 }
 
-.timeline ul li.in-view:after{
-  background-color:rgb(34, 20, 191);
+.timeline ul li.in-view div{
+  transform: none;
+  opacity: 1;
+  border-radius: 40px;
 }
 
-.timeline ul li.in-view div{
-  transform: none !important;
-  opacity: 1;
+.timeline ul li.in-view div:hover {
+  
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3); /* Add a drop shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+  border-radius: 40px;
+  background-color:rgb(248, 209, 35);
 }
 
 /* By the Numbers section styling */
 .cp-bythenumbers-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Set max-width to match other sections */
+  margin: 0 auto; /* Center align */
+  overflow: hidden;
+  margin-top: 20px;
+  
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 50px; /* Space between rows */
+  border-radius: 30px;
+background-color:rgba(255, 255, 255, 0.8);
+border: 1px solid rgb(3, 2, 3);
+box-shadow:  -22px 22px 44px #d4d4d4,
+            
 }
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background: linear-gradient(-45deg, #409389 0%, #510265 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
 
 /* Thank You section styling */
 .cp-thankyou-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Set max-width to match other sections */
+  margin: 0 auto; /* Center align */
+  overflow: hidden;
+  margin-top: 75px;
+  margin-bottom: 50px;
+ 
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color:rgb(233, 233, 233);
+border: 1px solid rgb(3, 2, 3);
+box-shadow:  -22px 22px 87px #a8a8a8,
+             22px -22px 87px #ffffff;
+  gap: 50px; /* Space between rows */
 }
+
+.thankyou-bg {
+margin: 0;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  
+  background-image: url('https://inrc.org/wp-content/uploads/2024/09/layered-waves-haikeicropped-scaled.jpg');
+}
+
